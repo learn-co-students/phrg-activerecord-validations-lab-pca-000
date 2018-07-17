@@ -12,16 +12,14 @@ class Post < ActiveRecord::Base
 private
 
   def click_bait
-    click_bait?
+    errors.add(:base, "Not valid") unless click_bait?
   end
 
   def click_bait?
-    unless title.present? &&
-           (title.include?("Won't Believe") ||
-           title.include?("Secret") ||
-           title.include?("Top [number]") ||
-           title.include?("Guess"))
-      errors.add(:base, "Not valid")
-    end
+    title.present? &&
+      (title.include?("Won't Believe") ||
+      title.include?("Secret") ||
+      title.include?("Top [number]") ||
+      title.include?("Guess"))
   end
 end
