@@ -9,7 +9,6 @@ AllCops:
     - 'db/*'
     - 'bin/*'
     - 'config/**/*'
-    
 
 Layout/AccessModifierIndentation:
   EnforcedStyle: outdent
