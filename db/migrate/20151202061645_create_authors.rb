@@ -10,3 +10,4 @@ class CreateAuthors < ActiveRecord::Migration
     end
   end
 end
+#
